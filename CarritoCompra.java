@@ -26,12 +26,6 @@ public class CarritoCompra {
         }
     }
 
-    public void vaciarCarrito() {
-        productos.clear();
-        total = 0.0;
-        System.out.println("Carrito vaciado.");
-    }
-
     public static void main(String[] args) {
         CarritoCompra carrito = new CarritoCompra();
         Producto leche = new Producto("Leche", 2.5, 1);
@@ -41,7 +35,10 @@ public class CarritoCompra {
         carrito.agregarProducto(pan);
         carrito.agregarProducto(huevos);
         carrito.mostrarProductos();
-        carrito.vaciarCarrito();
+        
+        productos.clear();
+        total = 0.0;
+        System.out.println("Carrito vaciado.");
         carrito.mostrarProductos();
     }
 }
