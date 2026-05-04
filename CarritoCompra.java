@@ -1,4 +1,6 @@
 
+import java.util.ArrayList;
+
 public class CarritoCompra {
     private ArrayList<Producto> productos;
     private double total;
@@ -26,19 +28,9 @@ public class CarritoCompra {
         }
     }
 
-    public static void main(String[] args) {
-        CarritoCompra carrito = new CarritoCompra();
-        Producto leche = new Producto("Leche", 2.5, 1);
-        Producto pan = new Producto("Pan", 1.0, 2);
-        Producto huevos = new Producto("Huevos", 3.0, 1);
-        carrito.agregarProducto(leche);
-        carrito.agregarProducto(pan);
-        carrito.agregarProducto(huevos);
-        carrito.mostrarProductos();
-        
+    public void vaciarCarrito() {
         productos.clear();
         total = 0.0;
         System.out.println("Carrito vaciado.");
-        carrito.mostrarProductos();
     }
 }
